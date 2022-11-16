@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+
+}
+
+section {
+    height: auto;
+    width: 100vw;
+    overflow-x: hidden;
+    background-size: contain;
+
+}
+p {
+    text-align: center;
+    color: white;
+
+}
+.sectionBg {
+    height: auto;
+    /* filter: blur(1px);
+    -webkit-filter: blur(1px); */ 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.launch-main {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    background-size: contain;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+.skropayLogo {
+    margin-top: 154px;
+}
+.launch-head {
+    margin-top: 90px;
+    font-size: 40px;
+    width: 70vw;
+}
+.launch-head span {
+    color: #336bf9;
+    font-weight: bold;
+
+}
+
+form {
+    margin-top: 90px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 106px;
+}
+.in-name {
+    width: 552px;
+    height: 76px;
+    font-size: 30px;
+    padding-left: 10px;
+    border-radius: 4px;
+    border: none;
+
+}
+.in-btn {
+    height: 76px;
+    font-size: 26px;
+    width: 312px;
+    background-color: #336CF9;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 10px;
+
+}
+.watch {
+    text-align: center;
+    margin-top: 55px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 2;
+}
+.watch p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.watch span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.launchfooter {
+    font-size: 30px;
+    margin-top: 201px;
+    padding-bottom: 20px;
+
+}
+.launchfooter span {
+    font-size: 35px;
+    font-style: bold;
+
+}
+
+@media screen and (max-width:1200px ) and (min-width:750px){
+
+ 
+.skropayLogo {
+    margin-top: 124px;
+}
+.launch-head {
+    margin-top: 70px;
+    font-size: 33px;
+    width: 70vw;
+}
+.launch-head span {
+    color: #336bf9;
+    font-weight: bold;
+
+}
+
+form {
+    margin-top: 70px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 106px;
+}
+.in-name {
+    width: 552px;
+    height: 76px;
+    font-size: 23px;
+    padding-left: 10px;
+    border-radius: 4px;
+    border: none;
+
+}
+.in-btn {
+    height: 76px;
+    font-size: 19px;
+    width: 312px;
+    background-color: #336CF9;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    padding-left: 10px;
+
+}
+.watch {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 2;
+}
+.watch p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.watch span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.launchfooter {
+    font-size: 23px;
+    margin-top: 180px;
+    padding-bottom: 20px;
+
+}
+.launchfooter span {
+    font-size: 28px;
+    font-style: bold;
+
+}
+}
