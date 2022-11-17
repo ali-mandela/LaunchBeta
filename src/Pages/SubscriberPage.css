@@ -115,10 +115,10 @@ p {
         flex-direction: column;
     }
 .skropayLogo {
-    margin-top: 124px; 
+    margin-top: 84px; 
 }
 .launch-head {
-    margin-top: 70px;
+    margin-top: 50px;
     font-size: 33px;
     width: 70vw;
 }
@@ -129,7 +129,7 @@ p {
 }
 
 form {
-    margin-top: 70px;
+    margin-top: 50px;
     display: flex;
     gap: 10px;
     justify-content: center;
