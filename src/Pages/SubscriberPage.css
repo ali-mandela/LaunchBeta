@@ -295,7 +295,7 @@ form {
 }
 .in-name {
     width: 250px;
-    height: 40x;
+    height: 40px;
     font-size: 16px;
     padding-left: 10px;
     border-radius: 4px;
@@ -305,7 +305,7 @@ form {
 .in-btn {
     height: 40px;
     font-size: 14px;
-    width: 50px;
+    width: 90px;
     background-color: #336CF9;
     border-radius: 4px;
     color: white;
