@@ -20,8 +20,7 @@ p {
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 40px 30px;
+    justify-content: center; 
 }
 
 .launch-main {
