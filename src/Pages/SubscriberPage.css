@@ -18,6 +18,9 @@ p {
     background-size: cover;
     overflow-x: hidden;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .launch-main {
