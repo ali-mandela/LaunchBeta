@@ -103,7 +103,7 @@ p {
 
 }
 
-@media screen and (max-width:1200px ) and (min-width:750px){
+@media screen and (max-width:1200px ) and (min-width:800px){
 
     .launch-main {
         width: 100vw;
@@ -187,19 +187,19 @@ form {
 }
 }
 
-@media screen and (max-width:750px ) and (min-width:500px){
+@media screen and (max-width:800px ) and (min-width:500px){
 
     .launch-main {
         width: 100vw;
         height: 100vh; 
     }
 .skropayLogo {
-    margin-top: 74px;
+    margin-top: 24px;
 }
 .launch-head {
     margin-top: 20px;
     font-size:28px;
-    width: 90vw;
+    width: 85vw;
 }
 .launch-head span {
     color: #336bf9;
@@ -207,16 +207,15 @@ form {
 
 }
 
-form {
-    margin-top: 20px;
-    display: flex;
+form { 
+    display: none;
     gap: 10px;
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 20px;
 }
 .in-name {
-    width: 300px;
-    height: 40x;
+    width: 320px;
+    height: 60px;
     font-size: 16px;
     padding-left: 10px;
     border-radius: 4px;
@@ -224,16 +223,16 @@ form {
 
 }
 .in-btn {
-    height: 40px;
+    height: 60px;
     font-size: 16px;
-    width: 120px;
+    width: 150px;
     background-color: #336CF9;
     border-radius: 4px;
     color: white;
     border: none;
     text-align: center;
     font-weight: bold;
-    padding-left: 10px;
+    padding-left: 0;
 
 }
 .watch {
@@ -255,8 +254,8 @@ form {
 
 .launchfooter {
     font-size: 18px;
-    margin-top: 120px;
-    padding-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 10px;
 
 }
 .launchfooter span {
@@ -322,11 +321,7 @@ form {
     text-align: center;
     line-height: 2;
 }
-.watch p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .watch span {
     font-size: 14px;
     font-weight: bold;
@@ -334,13 +329,11 @@ form {
 
 .launchfooter {
     font-size: 18px;
-    margin-top: 90px;
-    padding-bottom: 20px;
+    margin-top: 90px; 
 
 }
 .launchfooter span {
-    font-size: 18px;
-    font-style: bold;
+    font-size: 18px; 
 
 }
 }

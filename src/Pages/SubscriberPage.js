@@ -120,7 +120,7 @@ Don't know what escrow is ?  <span style={{color:'#1BE6D6'}}>  Google it duh!</s
 </p>
 </div>  
   <div className='launchfooter'>
-  <p>Be in Top <strong>10,000</strong> to get early access : <strong style={{color:'#1BE6D6'}}  >{subs}</strong> <strong >Subscribed</strong></p>
+  <p>Be in Top <strong>10,000</strong> to get early access : <strong style={{color:'#1BE6D6'}}  >{`99999${subs}`}</strong> <strong >Subscribed</strong></p>
 </div>
 </div>
 
