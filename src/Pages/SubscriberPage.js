@@ -1,90 +1,109 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios';
+import { useState, useEffect} from 'react'
 import './SubscriberPage.css'
 import Skropaywhite from '../Assets/Skropaywhite.png'
 import skropayPlay from '../Assets/skropayPlay.png'
 import bgImg from '../Assets/earlyaccessBg.png'
-import innerBG from '../Assets/innerBG.png'
-import axiosapi from '../axios'
+import innerBG from '../Assets/innerBG.png' 
+import axios from 'axios'
 import {toast, ToastContainer, } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+// import axiosAPI from '../axios'
 
 // skropayPlay 
 
 const SubscriberPage = () => {
-    const [email, setEmail] = useState(''); 
-    const [subs , setSubs]  =useState() 
+    const [email, setEmail] = useState('')  
+    const [subs , setSubs]  =useState(10)  
+
+    // const url = 'http://localhost:3001';
+    const url = "https://git.heroku.com/sklaunch-node.git";
+ 
+
+//funcion to get data -- num of sbsccriber
+    const getApiData=async(url)=>{
+        try{
+            // const res = await axios.get('http://localhost:3001/registter')
+            const res = await axios.get(`${url}/registter`)
+            // const res = await axiosAPI.get('/registter');
+
+        setSubs(res.data.num);
+        console.log(' i am getting data');
+        }catch(eror){
+            console.log(eror);
+                setSubs(eror.request.status)
+        } 
+    } 
     
     //use effect
-    useEffect(() => {
-        axiosapi.get('/registter').then(res=>{
-            // axios.get('http://localhost:3001/registter').then(res=>{
+    useEffect(() => { 
+        getApiData(url);  
+        }, [ ])  
+
+ 
+const handleSubmit=(e)=>{
+    e.preventDefault();  
+}
+
+const register =async ()=>{ 
+    console.log();
+    console.log(email); 
+    if(email){
+        try{ 
+            // const res = await axios.post('http://localhost:3001/register', {email});
+            const res = await axios.post(`${url}/register`, {email});
             console.log(res);
-            setSubs(res.data.num)
-        }).catch(e=>{
-            setSubs(1000)
+            if(res.status===201){
+                toast.success(res.data.message,{
+                    position:'top-left',
+                    autoClose:5000,
+                    pauseOnHover:true,
+                    draggable:true,
+                    theme:"dark",
+            })}else{
+                toast.success(res.data.message,{
+                    position:'top-left',
+                    autoClose:5000,
+                    pauseOnHover:true,
+                    draggable:true,
+                    theme:"dark",
+            })
+            }
+        
+        }catch(e){
+            console.log(e);
+            toast.error(e.message,{
+                position:'top-left',
+                autoClose:5000,
+                pauseOnHover:true,
+                draggable:true,
+                theme:"dark",
         })
-        }, [ ])
-    
-
- // handle validaition
-const handleValidiation = ()=>{
-    if(email===''){
+        }
+        
+    }
+    else{
         toast.error("email field can't be empty",{
-                position:'top-left',
-                autoClose:5000,
-                pauseOnHover:true,
-                draggable:true,
-                theme:"dark",
-        });
-        return false;
-    } 
-return true;
+                            position:'top-left',
+                            autoClose:5000,
+                            pauseOnHover:true,
+                            draggable:true,
+                            theme:"dark",
+                    });
+    }
+  setEmail('')
 }
-
-    const handleSubmit = async (e) => 
-    {   
-        e.preventDefault(); 
-
-        if(handleValidiation()){ 
-            const { data } = email;
-            const {res } = await axios.post('http://localhost:3001/register', {data})
-            // const {res} = await axiosapi.post('/register', {  email }); 
-        if(res.status===false){
-            toast.error(res.error,{
-                position:'top-left',
-                autoClose:5000,
-                pauseOnHover:true,
-                draggable:true,
-                theme:"dark",
-        });
-        }
-        if(res.status===true){
-            setSubs(res.num)
-            toast.error("succesfully submitted",{
-                position:'top-left',
-                autoClose:5000,
-                pauseOnHover:true,
-                draggable:true,
-                theme:"dark",
-        });
-        }
-        }  
-    setEmail(' ');
-}
-
-//use effect
-
 
 
     return ( <> <section
-        className='sectionBg'
+        className='outer-bg'
         style={{
         backgroundImage: `url(${bgImg})`
-    }}>
-        <div className='launch-main' style={{ backgroundImage: `url(${innerBG})` }}>
+    } }>
+    <div className='inner-bg' style={{ backgroundImage: `url(${innerBG})` }}>
+        <div className='launch-main' >
 
             <img  className='skropayLogo' src={Skropaywhite} alt='Skropaywhitelogo'/>
+          
           
 <div className='launch-head'> 
                 <p >
@@ -92,24 +111,25 @@ return true;
                     is a digital escrow platform that completely protects you from being
                     <span> scammed</span>
                 </p>
-            </div> 
-            <div>
-                        <form  className='form-div' action=''  onSubmit={(e)=>{handleSubmit(e)}}  >
+            </div>  
+                     <form className='form-div' onSubmit={(event)=>handleSubmit(event)} > 
                               <input
                                 type="email"
                                 name="email"
                                 placeholder='Enter Your Email'
                                 className='in-name'
+                                value={email}
                                 onChange={(e)=>setEmail(e.target.value)}
                                 autoComplete="off"
                               />
 
-                            <button type="submit"  className='in-btn'>Get Early Access</button>
+                            <button type="submit"   className='in-btn'
+                            onClick={register}
+                            >Get Early Access</button>
                              
-                            </form> 
-                            </div>
+                           </form>  
               <div className='watch'>
-<p>
+<p> 
 
 Don't know what escrow is ?  <span style={{color:'#1BE6D6'}}>  Google it duh!</span>
 </p>
@@ -120,10 +140,10 @@ Don't know what escrow is ?  <span style={{color:'#1BE6D6'}}>  Google it duh!</s
 </p>
 </div>  
   <div className='launchfooter'>
-  <p>Be in Top <strong>10,000</strong> to get early access : <strong style={{color:'#1BE6D6'}}  >{`99999${subs}`}</strong> <strong >Subscribed</strong></p>
+  <p>Be in Top <strong>10,000</strong> to get early access : <strong style={{color:'#1BE6D6'}}  >{subs}</strong> <strong >Subscribed</strong></p>
 </div>
 </div>
-
+</div>
     </section> 
     <ToastContainer/>
     </> )
