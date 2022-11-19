@@ -14,6 +14,7 @@ import 'react-toastify/dist/ReactToastify.css'
 const SubscriberPage = () => {
     const [email, setEmail] = useState('')  
     const [subs , setSubs]  =useState(10)  
+    const [ isloading, setIsLoading] = useState(false)
 
     // const url = 'http://localhost:3001';
     const url = "https://git.heroku.com/sklaunch-node.git";
@@ -32,6 +33,7 @@ const SubscriberPage = () => {
             console.log(eror);
                 setSubs(eror.request.status)
         } 
+        setIsLoading(true);
     } 
     
     //use effect
@@ -94,7 +96,8 @@ const register =async ()=>{
 }
 
 
-    return ( <> <section
+    return ( <>
+     { isloading && <section
         className='outer-bg'
         style={{
         backgroundImage: `url(${bgImg})`
@@ -144,7 +147,7 @@ Don't know what escrow is ?  <span style={{color:'#1BE6D6'}}>  Google it duh!</s
 </div>
 </div>
 </div>
-    </section> 
+    </section> }
     <ToastContainer/>
     </> )
 }
