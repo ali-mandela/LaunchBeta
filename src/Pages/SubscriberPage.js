@@ -17,7 +17,7 @@ const SubscriberPage = () => {
     const [ isloading, setIsLoading] = useState(false)
 
     // const url = 'http://localhost:3001';
-    const url = "https://sklaunch-node.herokuapp.com";
+    const url = "https://skpay-node.herokuapp.com";
  
 
 //funcion to get data -- num of sbsccriber

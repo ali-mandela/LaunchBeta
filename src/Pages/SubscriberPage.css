@@ -27,7 +27,7 @@ p {
     overflow-x: hidden;
     background-size: cover; 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center; 
 }
 
