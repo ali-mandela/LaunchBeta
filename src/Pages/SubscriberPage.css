@@ -42,8 +42,8 @@ p {
     flex-direction: column;
 }
 .skropayLogo {
-    padding-top: 80px;
-    margin-top: 130px;
+    /* padding-top: 80px; */
+    margin-top:30px;
 }
 .launch-head {
     margin-top: 90px;
@@ -117,10 +117,10 @@ p {
  @media screen and (max-width:1200px ) and (min-width:800px){
 
    
-.skropayLogo {
-    padding-top: 80px;
-    margin-top: 100px;
-}
+/* .skropayLogo {
+    /* padding-top: 80px; */
+    /* margin-top: 10px; 
+} */
 .launch-head {
     margin-top: 70px;
     font-size: 32px;
