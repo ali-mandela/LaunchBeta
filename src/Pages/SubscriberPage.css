@@ -196,10 +196,10 @@ p {
 @media screen and (max-width:800px ) and (min-width:200px){
 
     
-.skropayLogo {
+/* .skropayLogo {
     margin-top: 100px;
     padding-top: 80px;
-}
+} */
 .launch-head {
     margin-top: 60px;
     font-size: 28px;
