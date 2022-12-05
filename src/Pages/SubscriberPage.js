@@ -21,8 +21,8 @@ const SubscriberPage = () => {
     const [subs , setSubs]  =useState(10)  
     const [ isloading, setIsLoading] = useState(false) 
 
-    const url = 'http://localhost:8000';
-    // const url = "https://skpay-node.herokuapp.com";
+    // const url = 'http://localhost:8000';
+    const url = "https://skpay-node.herokuapp.com";
  
 
 //funcion to get data -- num of sbsccriber
