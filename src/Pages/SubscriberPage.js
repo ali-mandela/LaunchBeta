@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react'
+import { useState, useEffect, createContext} from 'react'
 import './SubscriberPage.css'
 import Skropaywhite from '../Assets/Skropaywhite.png'
 import skropayPlay from '../Assets/skropayPlay.png'
@@ -7,17 +7,22 @@ import innerBG from '../Assets/innerBG.png'
 import axios from 'axios'
 import {toast, ToastContainer, } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import {  useNavigate } from 'react-router-dom' 
 // import axiosAPI from '../axios'
 
 // skropayPlay 
 
 const SubscriberPage = () => {
+      
+    // const num = createContext();
+
+    const navigate = useNavigate();
     const [email, setEmail] = useState('')  
     const [subs , setSubs]  =useState(10)  
-    const [ isloading, setIsLoading] = useState(false)
+    const [ isloading, setIsLoading] = useState(false) 
 
-    // const url = 'http://localhost:3001';
-    const url = "https://skpay-node.herokuapp.com";
+    const url = 'http://localhost:8000';
+    // const url = "https://skpay-node.herokuapp.com";
  
 
 //funcion to get data -- num of sbsccriber
@@ -45,31 +50,36 @@ const SubscriberPage = () => {
 const handleSubmit=(e)=>{
     e.preventDefault();  
 }
+const EEmail = createContext();
+
+ 
 
 const register =async ()=>{ 
-    console.log();
-    console.log(email); 
+
     if(email){
         try{ 
             // const res = await axios.post('http://localhost:3001/register', {email});
             const res = await axios.post(`${url}/register`, {email});
             console.log(res);
-            if(res.status===201){
+
+            if(res.status===201){                
                 toast.success(res.data.message,{
                     position:'top-left',
                     autoClose:5000,
                     pauseOnHover:true,
                     draggable:true,
                     theme:"dark",
-            })}else{
+            }); 
+            navigate('/thankYou')
+
+        }else{
                 toast.success(res.data.message,{
                     position:'top-left',
                     autoClose:5000,
                     pauseOnHover:true,
                     draggable:true,
                     theme:"dark",
-            })
-            }
+            });}
         
         }catch(e){
             console.log(e);
@@ -97,6 +107,7 @@ const register =async ()=>{
 
 
     return ( <>
+    <EEmail.Provider value={'email'}> 
      { isloading && <section
         className='outer-bg'
         style={{
@@ -147,9 +158,11 @@ Don't know what escrow is ?  <span style={{color:'#1BE6D6'}}>  Google it duh!</s
 </div>
 </div>
 </div>
-    </section> }
+    </section> }  
     <ToastContainer/>
-    </> )
-}
+    </EEmail.Provider>
 
-export default SubscriberPage
+    </> )
+};
+ 
+export default SubscriberPage;
