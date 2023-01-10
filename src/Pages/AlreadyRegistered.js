@@ -5,7 +5,7 @@ import innerBG from '../Assets/innerBG.png'
 import {responseData} from '../Context/dataContext'
 import axios from 'axios'
 
-const ThankYouPage = () => {
+const AlreadyRegistered = () => {
     const idd = useParams(); 
     const {resDataEmail, resDataRef} = useContext(responseData); 
     const [subs,
@@ -38,7 +38,7 @@ const ThankYouPage = () => {
     return ( <> <div className='thankyouWrapper'>
         <div className='thankyouDiv>'>
             <div className='thankyouTop'>
-                <h1>Thank You!</h1>
+                <h1>Already Registered!</h1>
                 <br/>
                 <p>We have added your email address to the signup queue.</p>
             </div>
@@ -106,7 +106,7 @@ const ThankYouPage = () => {
                     <button className='copyClip'   onClick={clickCopy} >        https://skropay.com/#/launch/${idd.id}      </button>
 
                     <button className='buttonSpan' onClick={clickCopy}>
-                                        {copied ? `copied` : `copy` }  </button>
+                    {copied ? `copied` : `copy` } </button>
  
                 </p>
             </div>
@@ -115,5 +115,5 @@ const ThankYouPage = () => {
 </>
 ) } 
 
-export default ThankYouPage //
+export default AlreadyRegistered 
  

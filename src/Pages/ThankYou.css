@@ -1,68 +1,200 @@
 
-p {
+.thankyouWrapper p {
     color: black;
-    font-size: 22px;
+    font-size: 18px;
 }
-a {
+.thankyouWrapper a{
     text-decoration: none;
     color: #336CF9;
-
     font-weight: 500;
-    font-size: 25px;
+    font-size: 18px;
 }
 .thankyouWrapper {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    /* justify-content:center; */
+    justify-content:center;
     width: 100wh;
     height: 100vh;
-    padding: 80px 10px;
+    padding:0 10px;
 }
 /* .thankyouDiv{
 
 } */
 .thankyouTop {
-    margin: 20px 0;
-    line-height: 2;
+    /* margin: 20px 0; */ 
+    line-height: 1.5;
 }
 .thankyouCenter {
-    margin: 30px;
+    margin-top: 30px;
     line-height: 2;
     display: flex;
     flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 220px;
+    height: 140px;
     justify-content: center;
 }
 
 .thankyouBottom {
-    margin: 30px;
+    /* margin: 30px; */
     line-height: 2;
 }
+.thankyouBottom h1{
+    margin: 30px 0 10px 0;
+}
 .thankyouFooter {
-    padding: 20px;
+    /* padding: 20px; */
     line-height: 2;
 }
 .thankyou-btn {
     display: flex;
     justify-content: space-evenly;
 }
-.thankyou-btn button {
+.thankyouFooter {
+    /* padding: 20px; */
+    line-height: 2;
+}
+.thankyou-btn a {
     width: 20%;
     height: 50px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: #336CF9; 
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     display: flex; 
     gap: 10px;
     align-items: center;
     justify-content: center;
+    margin: 30px 0;
+}
+.thankyou-btn a:hover{
+    background-color:#2050cb ;
+}
+.thankyouFooter h1{
+    font-size: 22px;
 }
 .thankyouFooter p{
     color: #336CF9;
 }
+.copyClip{ 
+    border: none;
+    border-radius: 2px;
+    padding: 3px 12px;
+    background-color: transparent;
+    color: #2050cb;
+    cursor: pointer; 
+    margin-right: 20px;
+}
+ 
+.buttonSpan{
+    padding: 4px 12px;
+    background-color: #2050cb; 
+    color: white;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+
+    /* font-weight: bold; */
+}
+.buttonSpan span{ 
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius: 3px;
+    padding: 4px;
+    width: 200px;
+    background-color: rgb(194, 194, 194); 
+    margin-left: 20px;
+}
+@media screen and (max-width:500px ) {
+
+    .thankyouWrapper p {
+        color: black;
+        font-size: 14px;
+    }
+    .thankyouWrapper a{
+        text-decoration: none;
+        color: #336CF9;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .thankyouWrapper h1{
+        font-size: 22px;
+    }
+    .thankyouWrapper{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content:flex-start;
+        width: 100wh;
+        height: 100vh;
+        padding:0 10px;
+        margin-top: 80px;
+    }
+    .thankyouTop {
+        line-height: 1.5;
+    }
+    .thankyouCenter {
+        margin-top: 20px;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 120px;
+        justify-content: center;
+        
+    }
+    
+    .thankyouBottom {
+        margin-top: 40px;
+        line-height: 1.4;
+    }
+    .thankyouBottom h1{
+        margin: 30px 0 10px 0;
+    }
+    .thankyouFooter {
+        /* padding: 20px; */
+        line-height: 2;
+    }
+    .thankyou-btn {
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        /* flex-direction: column; */
+        justify-content: space-evenly;
+    }
+    .thankyou-btn a {
+        width: 20%;
+        height: 30px;
+        border: none;
+        border-radius: 8px;
+        background-color: #336CF9; 
+        color: white;
+        font-size: 16px;
+        display: flex; 
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    .thankyou-btn a p{
+        display: none;
+    }
+    .thankyou-btn a:hover{
+        background-color:#2050cb ;
+    }
+    .thankyouFooter h1{
+        font-size: 18px;
+    }
+    .thankyouFooter p{
+        color: #336CF9;
+    }
+   
+   }
+

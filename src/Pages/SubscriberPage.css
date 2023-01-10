@@ -1,17 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI';
-
-}
 p {
-    text-align: center;
-    color: white;
+    text-align: center; 
 
 }
-/* Class-  */
-/* // background */
+a{
+    text-decoration: none;
+}
+ .bold{
+    font-weight: bolder !important;
+    color: #336CF9;
+    /* font-size: 34px; */
+    /* background-color: white; */
+ }
 .outer-bg {
     height: auto;
     width: 100vw;
@@ -27,7 +26,7 @@ p {
     overflow-x: hidden;
     background-size: cover; 
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center; 
 }
 
@@ -43,41 +42,52 @@ p {
 }
 .skropayLogo {
     /* padding-top: 80px; */
-    margin-top:30px;
+    /* margin-top:30px; */
+    width: 314px;
+    height: 90px;
+    padding: 0;
+    margin: 0;
+    /* width: 18vw; */
+    /* height: 12vh; */
 }
 .launch-head {
-    margin-top: 90px;
-    font-size: 40px;
-    width: 70vw;
+    margin-top: 40px;
+    width: 60vw;
+    color: white;
 }
-.launch-head span {
-    color: #336bf9;
-    font-weight: bold;
+.launch-head p{
+    /* font-family: 'Roboto';  */
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: normal;
 
 }
+ 
 
 .form-div { 
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-top: 106px;
+    margin-top: 60px;
 }
 
 .in-name {
-    width: 552px;
-    height: 76px;
-    font-size: 30px;
+    width: 452px;
+    height: 56px;
+    font-size: 18px;
     padding-left: 10px;
-    border-radius: 4px;
-    border: none;
+    /* border-radius: 8px; */
+    color: #707070;
+    border: none; 
 
 }
 .in-btn {
-    height: 76px;
-    font-size: 26px;
-    width: 312px;
+    height: 56px;
+    font-size: 18px;
+    width: 242px;
     background-color: #336CF9;
-    border-radius: 4px;
+    /* border-radius: 8px; */
     color: white;
     border: none;
     text-align: center;
@@ -85,27 +95,33 @@ p {
     padding-left: 10px;
 
 }
+/* .in-btn:hover{
+    box-shadow:1px 1px 1px 1px  rgb(255, 255, 255);
+} */
 .watch {
     text-align: center;
-    margin-top: 55px;
+    margin-top: 60px;
     font-size: 22px;
     text-align: center;
-    line-height: 2;
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 80px;
 }
 .watch p {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
 }
 .watch span {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .launchfooter {
-    font-size: 30px;
-    margin-top: 201px;
-    padding-bottom: 20px;
+    font-size: 24px;
+    position: absolute; 
+    color: white; 
+    bottom: 40px;
 
 }
 .launchfooter span {
@@ -114,160 +130,219 @@ p {
 
 }
 
- @media screen and (max-width:1200px ) and (min-width:800px){
-
+@media screen and (max-width:800px ) and (min-width:500px){
+    p {
+        text-align: center; 
+    
+    }
+ 
+    .bold{
+        font-weight: 900; 
+    } 
+    .skropayLogo { 
+        width: 314px;
+        height: 90px;
+        padding: 0;
+        margin: 0; 
+    }
+    .launch-head {
+        margin-top: 40px;
+        width: 85vw;
+        color: white;
+    }
+    .launch-head p{
+        /* font-family: 'Roboto';  */
+        font-size: 22px;
+        text-align: center;
+        line-height: 1.5;
+        font-weight: normal;
+    
+    }
+     
+    
+    .form-div { 
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    
+    .in-name {
+        width: 320px;
+        height: 45px;
+        font-size: 16px;
+        padding-left: 10px;
+        /* border-radius: 8px; */
+        color: #707070;
+        border: none; 
+    
+    }
+    .in-btn {
+        height: 45px;
+        font-size: 16px;
+        width: 150px;
+        background-color: #336CF9;
+        /* border-radius: 8px; */
+        color: white;
+        border: none;
+        text-align: center;
+        font-weight: bold;
+        padding-left: 10px;
+    
+    } 
+    .watch {
+        text-align: center;
+        margin-top: 60px;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+        line-height: 1.5;
+        margin-bottom: 40px;
+    }
+    .watch p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .watch span {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .launchfooter {
+        font-size: 24px;
+        position: absolute;
+        margin-top: 90px;
+        color: white;
+        bottom: 10px;
+    
+    }
+    .launchfooter span {
+        font-size: 28px;
+        font-style: bold;
+    
+    }
    
-/* .skropayLogo {
-    /* padding-top: 80px; */
-    /* margin-top: 10px; 
-} */
-.launch-head {
-    margin-top: 70px;
-    font-size: 32px;
-    width: 70vw;
-}
-.launch-head span {
-    color: #336bf9;
-    font-weight: bold;
-
 }
 
-.form-div { 
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 86px;
-    width: 80vw;
-}
-
-.in-name {
-    width: 50%;
-    height: 56px;
-    font-size: 22px;
-    padding-left: 10px;
-    border-radius: 4px;
-    border: none;
-
-}
-.in-btn {
-    height: 56px;
-    font-size: 20px;
-    width: 30%;
-    background-color: #336CF9;
-    border-radius: 4px;
-    color: white;
-    border: none;
-    text-align: center;
-    font-weight: bold;
-    padding-left: 10px;
-
-}
-.watch {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 16px;
-    text-align: center;
-    line-height: 2;
-}
-.watch p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.watch span {
-    font-size: 19px;
-    font-weight: bold;
-}
-
-.launchfooter {
-    font-size: 22px;
-    margin-top: 90px;
-    padding-bottom: 20px;
-
-}
-.launchfooter span {
-    font-size: 28px;
-    font-style: bold;
-
-}
-
-}
-
-@media screen and (max-width:800px ) and (min-width:200px){
-
+@media screen and (max-width:500px ){
+    p {
+        text-align: center; 
     
-/* .skropayLogo {
-    margin-top: 100px;
-    padding-top: 80px;
-} */
-.launch-head {
-    margin-top: 60px;
-    font-size: 28px;
-    width: 80vw;
-}
-.launch-head span {
-    color: #336bf9;
-    font-weight: bold;
-
-}
-
-.form-div { 
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 76px;
-    width:90vw;
-}
-
-.in-name {
-    width: 60%;
-    height: 46px;
-    font-size: 14px;
-    padding-left: 10px;
-    border-radius: 4px;
-    border: none;
-
-}
-.in-btn {
-    height: 46px;
-    font-size: 12px;
-    width: 30%;
-    background-color: #336CF9;
-    border-radius: 4px;
-    color: white;
-    border: none;
-    text-align: center;
-    font-weight: bold;
-    padding-left: 10px;
-
-}
-.watch {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 16px;
-    text-align: center;
-    line-height: 2;
-}
-.watch p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.watch span {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.launchfooter {
-    font-size: 18px;
-    margin-top: 60px;
-    padding-bottom: 20px;
-
-}
-.launchfooter span {
-    font-size: 24px;
-    font-style: bold;
-
-}
+    }
+    .inner-bg{
+        height: 100vh; 
+        width: 100vw; 
+        overflow-x: hidden;
+        background-size: cover; 
+        display: flex;
+        align-items: flex-start;
+        justify-content:center; 
+    }
     
-} 
+    .launch-main {
+        /* width: 100vw; */
+        /* height: 100vh; */
+        display: flex;
+        background-size: contain;
+        align-items: center;
+        overflow-x: hidden;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .bold{
+        font-weight: bolder !important;
+        color: #336CF9;
+        font-size: 28px;
+     }
+    .bold{
+        font-weight: 900; 
+    } 
+    .skropayLogo { 
+        width: 314px;
+        height: 90px;
+        padding: 0;
+        margin-top: 40px; 
+    }
+    .launch-head {
+        /* margin-top: 40px; */
+        width: 85vw;
+        color: white;
+    }
+    .launch-head p{
+        /* font-family: 'Roboto';  */
+        font-size: 20px;
+        text-align: center;
+        line-height: 1.5;
+        font-weight: normal;
+    
+    }
+     
+    
+    .form-div { 
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    
+    .in-name {
+        width: 220px;
+        height: 35px;
+        font-size: 14px;
+        padding-left: 10px;
+        /* border-radius: 8px; */
+        color: #707070;
+        border: none; 
+    
+    }
+    .in-btn {
+        height: 35px;
+        font-size: 10px;
+        width: 120px;
+        background-color: #336CF9;
+        /* border-radius: 8px; */
+        color: white;
+        border: none;
+        text-align: center;
+        font-weight: bold;
+        padding-left: 10px;
+    
+    } 
+    .watch {
+        text-align: center;
+        margin-top: 60px;
+        /* font-size: 20px; */
+        text-align: center;
+        color: white;
+        line-height: 1.5;
+        margin-bottom: 40px;
+    }
+    .watch p {
+        /* display: block; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px; 
+    }
+    .watch p span {
+        /* display: block; */
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .launchfooter {
+        font-size: 18px;
+        position: absolute;
+        margin-top: 90px;
+        color: white;
+        bottom: 40px;
+    
+    }
+    .launchfooter span {
+        font-size: 22px;
+        font-style: bold;
+    
+    }
+   
+}
